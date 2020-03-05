@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+
+	"name": "tab-events-events",
+	"description": "A utility addon that prints out tab related events",
+	"version": "0.1.0",
+
+	"author": "Tilwa Qendov",
+	"homepage_url": "https://github.com/tqdv/tab-events-events",
+
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	}
+}
