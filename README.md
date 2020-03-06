@@ -47,3 +47,7 @@ npm run lint
 ### Icon
 
 `icon.svg` is edited in Inkscape, which is then saved as a plain SVG as `icon.plain.svg`.
+
+## License
+
+[Artistic-2.0](LICENSE)

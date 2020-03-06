@@ -3,7 +3,7 @@
 
 	"name": "tab-events-tab-events",
 	"description": "A utility addon that prints out tab related events",
-	"version": "0.1.0",
+	"version": "0.1.1",
 
 	"author": "Tilwa Qendov",
 	"homepage_url": "https://github.com/tqdv/tab-events-tab-events",
@@ -15,7 +15,12 @@
 	},
 	
 	"browser_action": {
-		"default_icon": "icons/icon.plain.svg"
+		"default_icon": "icons/icon.plain.svg",
+		"theme_icons": [{
+			"size": 16,
+			"dark": "icons/icon.plain.svg",
+			"light": "icons/icon-dark.plain.svg"
+		}]
 	},
 
 	"icons": {
