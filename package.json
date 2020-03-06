@@ -1,11 +1,11 @@
 {
-  "name": "tab-events-events",
+  "name": "tab-events-tab-events",
   "version": "0.1.0",
   "description": "A utility addon that prints out tab related events",
   "main": "background.js",
   "scripts": {
     "run": "web-ext run",
-    "lint": "eslint *.js",
+    "lint": "eslint *.js && echo 'No problems found.' || echo 'eslint returned non zero'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tilwa Qendov <tilwa.qendov@gmail.com> (http://kawa.tf)",

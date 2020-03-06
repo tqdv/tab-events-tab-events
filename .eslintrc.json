@@ -1,6 +1,7 @@
 {
     "env": {
-        "browser": true,
+        "webextensions": true,
+		"browser": true,
         "es6": true
     },
     "extends": [
@@ -15,5 +16,14 @@
         "sourceType": "module"
     },
     "rules": {
+		"camelcase": "off",
+		"id-match": [
+			"error",
+			"^[a-z]+(_[a-z]+)*$",
+			{
+				"onlyDeclarations": true,
+				"ignoreDestructuring": true
+			}
+		]
     }
 }

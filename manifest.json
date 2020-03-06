@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 
-	"name": "tab-events-events",
+	"name": "tab-events-tab-events",
 	"description": "A utility addon that prints out tab related events",
 	"version": "0.1.0",
 
@@ -12,5 +12,13 @@
 		"scripts": [
 			"background.js"
 		]
+	},
+	
+	"browser_action": {
+		"default_icon": "icons/icon.plain.svg"
+	},
+
+	"icons": {
+		"1": "icons/icon.plain.svg"
 	}
 }
