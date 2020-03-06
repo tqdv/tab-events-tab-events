@@ -20,7 +20,13 @@ Click on the addon icon to open the log page.
 
 ## Development
 
-This addon isn't really meant to be distributed yet. You can probably just use web-ext. Look it up online.
+### Building
+
+```bash
+npm run build
+```
+
+Creates `build/tete.zip`.
 
 ### Testing
 

@@ -6,7 +6,7 @@
 	"version": "0.1.0",
 
 	"author": "Tilwa Qendov",
-	"homepage_url": "https://github.com/tqdv/tab-events-events",
+	"homepage_url": "https://github.com/tqdv/tab-events-tab-events",
 
 	"background": {
 		"scripts": [
