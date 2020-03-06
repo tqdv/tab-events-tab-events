@@ -7,7 +7,7 @@
     "run": "web-ext run",
     "lint": "eslint *.js && echo 'No problems found.' || echo 'eslint returned non zero'",
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "zip build/tete.zip manifest.json background.js page.html page.js icons/icon.plain.svg README.md LICENSE"
+	"build": "zip build/tete.zip manifest.json background.js page.html page.js icons/icon*.plain.svg README.md CHANGELOG.md LICENSE"
   },
   "author": "Tilwa Qendov <tilwa.qendov@gmail.com> (http://kawa.tf)",
   "license": "Artistic-2.0",

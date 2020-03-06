@@ -33,9 +33,22 @@ function create_timestamp() {
   return `${hours}:${minutes}:${seconds}.${millis}`;
 }
 
+function new_entry_group () {
+  const entry_group = document.createElement('div');
+  entry_group.classList.add('entry-group');
+  html_log.insertAdjacentElement('afterbegin', entry_group);
+  return entry_group;
+}
+
+// Variables for entry grouping
+let entry_group;
+let new_entry_timer;
+let entry_timed_out = true;
+
+
 // Custom log function to display all fields in the page
 function log(event_name, thing) {
-  // Add to HTML
+  // Copy from template
   const new_entry = entry_template.cloneNode(/* deep */ true);
   delete new_entry.id;
   new_entry.hidden = false;
@@ -48,10 +61,19 @@ function log(event_name, thing) {
   event_link.textContent = event_name;
   new_entry.getElementsByClassName('event')[0].append(event_link);
 
-
   new_entry.getElementsByClassName('entry-text')[0].textContent = thing.toString();
 
-  html_log.insertAdjacentElement('afterbegin', new_entry);
+  /* Group events if they happen within 100ms of each other */
+  if (entry_timed_out) {
+    entry_group = new_entry_group();
+    html_log.insertAdjacentElement('afterbegin', entry_group);
+  }
+  // Reset timeout
+  clearTimeout(new_entry_timer);
+  entry_timed_out = false;
+  new_entry_timer = setTimeout(() => { entry_timed_out = true; }, 100)
+
+  entry_group.insertAdjacentElement('afterbegin', new_entry);
 }
 
 /* Add event listeners to update the log */

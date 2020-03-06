@@ -5,12 +5,18 @@
 	<title>tab-events-tab-events</title>
 	<link rel="shortcut icon" type="image/svg" href="icons/icon.plain.svg"/>
 	<style>
+	/* HTML elements style */
+	a {
+		text-decoration: none;
+	}
 	.entry[hidden] {
 		display: none;
 	}
+	
+	/* Main log style */
 	.entry, #log-header {
 		display: flex;
-		border-bottom: 1px solid grey;
+		border-bottom: 1px solid lightgrey;
 	}
 	.entry > span, #log-header > span {
 		padding-left: 0.5ex;
@@ -24,6 +30,16 @@
 	}
 	#log-header {
 		font-weight: bold;
+	}
+	
+	/* Entry groups with alternating handle color */
+	.entry-group:nth-last-child(even) {
+		border-radius: 0.2em;
+		border-left: 0.2em solid rebeccapurple;
+	}
+	.entry-group:nth-last-child(odd) {
+		border-radius: 0.2em;
+		border-left: 0.2em solid olive;
 	}
 	</style>
 </head>
