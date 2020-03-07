@@ -41,21 +41,79 @@
 		border-radius: 0.2em;
 		border-left: 0.2em solid olive;
 	}
+	
+	/* Options */
+	#options {
+		margin-bottom: 2ex;
+	}
+	#options-options {
+		display: flex;
+	}
+	#options-options h3 {
+		margin-top: 0;
+	}
+	
+	/* Favicons */
+	#favicon-options {
+		width: 200px;
+	}
+	.favicon-option {
+		vertical-align: middle;
+		padding: 0.5%;
+		background-color: #ccc;
+		border: 1px solid grey;
+		border-radius: 10%;
+	}
+	input:checked + label .favicon-option {
+		background-color: #aaa;
+	}
+	
+	/* Clear log button */
+	#clear-log {
+		vertical-align: middle;
+	}
 	</style>
 </head>
 <body>
-	<header id="log-header">
-		<span class="timestamp">Timestamp</span>
-		<span class="event">Event</span>
-		<span class="entry-text">Message</span>
-	</header>
+	<section id="options">
+		<h2>Options</h2>
+		<div id="options-options">
+			<div id="favicon-options">
+				<h3>Favicon:</h3>
+				<div>
+					<input type="radio" name="favicon" value="icons/icon.plain.svg" id="light-favicon">
+					<label for="light-favicon"><img class="favicon-option" src="icons/icon.plain.svg"></label>
+					<input type="radio" name="favicon" value="icons/icon-dark.plain.svg" id="dark-favicon">
+					<label for="dark-favicon"><img class="favicon-option" src="icons/icon-dark.plain.svg"></label>
+				</div>
+			</div>
+			<div>
+				<h3>Log:</h3>
+				<div>
+					<label for="new-entry-timeout">Grouping interval (in ms):</label>
+					<input type="number" name="new_entry_timeout" value=100 id="new_entry_timeout">
+				</div>
+				<div>
+					<label for="ignore-unfocus">Ignore focus changing to a non-Firefox window:</label>
+					<input type="checkbox" name="ignore_unfocus" id="ignore_unfocus">
+				</div>
+			</div>
+		</div>
+	</section>
 	<section id="log">
+		<h2>Event log <button id="clear-log">Clear log</button></h2>
+		<header id="log-header">
+			<span class="timestamp">Timestamp</span>
+			<span class="event">Event</span>
+			<span class="entry-text">Message</span>
+		</header>
 	</section>
 	<div id="entry-template" class="entry" hidden>
 		<span class="timestamp"></span>
 		<span class="event"></span>
 		<span class="entry-text"></span>
 	</div>
-	<script type="text/javascript" src="page.js"></script>
+	<script type="text/javascript" src="log.js"></script>
+	<script type="text/javascript" src="settings.js"></script>
 </body>
 </html>

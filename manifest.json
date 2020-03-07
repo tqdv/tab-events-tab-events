@@ -3,10 +3,18 @@
 
 	"name": "tab-events-tab-events",
 	"description": "A utility addon that prints out tab related events",
-	"version": "0.1.1",
+	"version": "0.1.2",
 
 	"author": "Tilwa Qendov",
 	"homepage_url": "https://github.com/tqdv/tab-events-tab-events",
+
+	"icons": {
+		"1": "icons/icon.plain.svg"
+	},
+	
+	"permissions": [
+		"storage"
+	],
 
 	"background": {
 		"scripts": [
@@ -23,14 +31,10 @@
 		}]
 	},
 
-	"icons": {
-		"1": "icons/icon.plain.svg"
-	},
-	
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "tab-events-tab-events@tqdv.addons.mozilla.org",
-			"strict_min_version": "45.0"
+			"strict_min_version": "55.0"
  		}
 	}
 }

@@ -19,7 +19,7 @@
 		"camelcase": "off",
 		"id-match": [
 			"error",
-			"^[a-z]+(_[a-z]+)*$",
+			"^[a-z]+(_[a-z]+)*$|^[a-z]+([A-Z][a-z]+)*$",
 			{
 				"onlyDeclarations": true,
 				"ignoreDestructuring": true

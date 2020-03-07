@@ -1,13 +1,14 @@
 {
   "name": "tab-events-tab-events",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A utility addon that prints out tab related events",
   "main": "background.js",
   "scripts": {
     "run": "web-ext run",
     "lint": "eslint *.js && echo 'No problems found.' || echo 'eslint returned non zero'",
+    "fix": "eslint --fix *.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "zip build/tete.zip manifest.json background.js page.html page.js icons/icon*.plain.svg README.md CHANGELOG.md LICENSE"
+	"build": "rm build/tete.zip >/dev/null; zip build/tete.zip manifest.json background.js page.html log.js settings.js icons/icon*.plain.svg README.md CHANGELOG.md LICENSE"
   },
   "author": "Tilwa Qendov <tilwa.qendov@gmail.com> (http://kawa.tf)",
   "license": "Artistic-2.0",
