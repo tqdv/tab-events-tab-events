@@ -1,6 +1,6 @@
 # tabs-events-tab-events
 
-A utility addon that prints out tab related events.
+A web browser addon that prints out tab-related events.
 
 ## Preview
 
@@ -8,7 +8,7 @@ A utility addon that prints out tab related events.
 
 ## Installation
 
-Download it from [Firefox addons](https://addons.mozilla.org/en-US/firefox/addon/tab-events-tab-events/).
+Download it from [Firefox addons](https://addons.mozilla.org/firefox/addon/tab-events-tab-events/).
 
 ## Usage
 
